@@ -19,6 +19,7 @@ export default async function Home() {
     }
   `);
   const fetchedReviews = await client.fetch(`*[_type == "reviews"][0..2]`);
+  const fetchLocation = await client.fetch(`*[_type == "location"][0]`);
 
   return (
     <>
@@ -28,6 +29,7 @@ export default async function Home() {
         <ImageText data={fetchedAbout} />
         <Cardapio cardapio={fetchedCardapio} />
         <Reviews reviews={fetchedReviews} />
+        <ImageText data={fetchLocation} />
       </main>
     </>
   );
