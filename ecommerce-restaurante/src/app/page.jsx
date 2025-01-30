@@ -2,6 +2,7 @@ import Benefits from "@/components/Benefits/Benefits";
 import Cardapio from "@/components/Cardapio/Cardapio";
 import Header from "@/components/Header/Header";
 import ImageText from "@/components/ImageText/ImageText";
+import Menu from "@/components/Menu/Menu";
 import Reviews from "@/components/Reviews/Reviews";
 import client from "@/sanity";
 
@@ -20,6 +21,7 @@ export default async function Home() {
   `);
   const fetchedReviews = await client.fetch(`*[_type == "reviews"][0..2]`);
   const fetchLocation = await client.fetch(`*[_type == "location"][0]`);
+  const fetchMenu = await client.fetch(`*[_type == "menu"][0]`);
 
   return (
     <>
@@ -30,6 +32,7 @@ export default async function Home() {
         <Cardapio cardapio={fetchedCardapio} />
         <Reviews reviews={fetchedReviews} />
         <ImageText data={fetchLocation} />
+        <Menu />
       </main>
     </>
   );
