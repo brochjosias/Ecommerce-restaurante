@@ -1,0 +1,24 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.reviews {
+  @include max-width;
+  margin-bottom: $marginBottom;
+  scroll-margin-top: 15rem;
+
+  .heading {
+    text-align: center;
+    margin-bottom: 6rem;
+
+    span {
+      text-transform: uppercase;
+      color: $gradient2;
+    }
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    gap: 2rem;
+  }
+}

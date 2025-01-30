@@ -1,23 +1,33 @@
 import Benefits from "@/components/Benefits/Benefits";
+import Cardapio from "@/components/Cardapio/Cardapio";
 import Header from "@/components/Header/Header";
+import ImageText from "@/components/ImageText/ImageText";
+import Reviews from "@/components/Reviews/Reviews";
 import client from "@/sanity";
 
 export default async function Home() {
   // Buscando os dados diretamente dentro da função async
   const fetchedHeader = await client.fetch(`*[_type == "header"][0]`);
   const fetchedBenefits = await client.fetch(`*[_type == "benefits"][0..2]`);
-
-  // Verifique os dados no console
-  console.log("Fetched Header:", fetchedHeader);
-  console.log("Fetched Benefits:", fetchedBenefits);
+  const fetchedAbout = await client.fetch(`*[_type == "about"][0]`);
+  const fetchedCardapio = await client.fetch(`
+    *[_type == "cardapio"][0..3]{
+      _id,
+      title,
+      category,
+      "image": image.asset->url
+    }
+  `);
+  const fetchedReviews = await client.fetch(`*[_type == "reviews"][0..2]`);
 
   return (
     <>
-      {/* Passando os dados para o componente Header */}
       <Header header={fetchedHeader} />
       <main>
-        {/* Passando os dados para o componente Benefits */}
         <Benefits benefits={fetchedBenefits} />
+        <ImageText data={fetchedAbout} />
+        <Cardapio cardapio={fetchedCardapio} />
+        <Reviews reviews={fetchedReviews} />
       </main>
     </>
   );
