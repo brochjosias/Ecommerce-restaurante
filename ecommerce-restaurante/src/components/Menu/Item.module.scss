@@ -5,8 +5,17 @@
   display: flex;
   align-items: center;
 
+  @include devices(mobile) {
+    flex-direction: column;
+    text-align: center;
+  }
+
   &:not(:last-of-type) {
     margin-bottom: 2.5rem;
+
+    @include devices(mobile) {
+      margin-bottom: 4rem;
+    }
   }
 
   .content {
@@ -30,6 +39,10 @@
     border-top: 1px dashed $white;
     width: 100%;
     margin: 0 2rem;
+
+    @include devices(mobile) {
+      display: none;
+    }
   }
 
   h5 {

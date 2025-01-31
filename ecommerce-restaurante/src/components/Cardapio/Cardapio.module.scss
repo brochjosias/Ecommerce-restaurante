@@ -6,6 +6,10 @@
   margin-bottom: $marginBottom;
   padding: 6rem 0;
 
+  @include devices(mobile) {
+    margin-bottom: $marginBottomMobile;
+  }
+
   .cardapio {
     @include max-width;
 

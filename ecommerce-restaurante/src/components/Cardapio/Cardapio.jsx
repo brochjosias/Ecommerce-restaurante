@@ -11,8 +11,6 @@ const Cardapio = ({ cardapio }) => {
     />
   ));
 
-  console.log("Cardápio recebido:", cardapio);
-
   return (
     <section className={styles["cardapio-wrapper"]}>
       <div className={styles.cardapio}>

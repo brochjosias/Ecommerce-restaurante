@@ -10,6 +10,13 @@
   margin-bottom: $marginBottom;
   scroll-margin-top: 15rem;
 
+  @include devices(tablet) {
+    flex-direction: column;
+  }
+
+  @include devices(mobile) {
+    margin-bottom: $marginBottomMobile;
+  }
 
   .image,
   .content {
@@ -20,6 +27,14 @@
   .image {
     position: relative;
     height: 44rem;
+
+    @include devices(tablet) {
+      margin-bottom: 4rem;
+    }
+
+    @include devices(mobile) {
+      height: 30rem;
+    }
   }
 
   .content {

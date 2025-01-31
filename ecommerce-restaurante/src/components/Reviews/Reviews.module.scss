@@ -6,6 +6,10 @@
   margin-bottom: $marginBottom;
   scroll-margin-top: 15rem;
 
+  @include devices(mobile) {
+    margin-bottom: $marginBottomMobile;
+  }
+
   .heading {
     text-align: center;
     margin-bottom: 6rem;

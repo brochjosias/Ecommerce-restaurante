@@ -5,6 +5,10 @@
   @include max-width;
   margin-bottom: $marginBottom;
 
+  @include devices(mobile) {
+    margin-bottom: $marginBottomMobile;
+  }
+
   .top {
     display: flex;
     justify-content: space-between;
@@ -15,4 +19,11 @@
     justify-content: center;
   }
 
+  .top,
+  .bottom {
+    @include devices(tablet) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 }
