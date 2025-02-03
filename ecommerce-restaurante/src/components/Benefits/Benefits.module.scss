@@ -3,10 +3,10 @@
 
 .benefits {
   @include max-width;
-  margin-bottom: $marginBottom;
+  margin-bottom: 5rem; // Reduzido de $marginBottom para valor fixo
 
   @include devices(mobile) {
-    margin-bottom: $marginBottomMobile;
+    margin-bottom: 1rem; // Reduzido de $marginBottomMobile
   }
 
   .top {

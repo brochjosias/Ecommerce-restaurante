@@ -4,6 +4,7 @@
 .item {
   display: flex;
   align-items: center;
+  margin-bottom: 5rem; // Adicionado margin-bottom principal
 
   @include devices(mobile) {
     flex-direction: column;
@@ -11,25 +12,24 @@
   }
 
   &:not(:last-of-type) {
-    margin-bottom: 2.5rem;
-
+    margin-bottom: 2ch;
     @include devices(mobile) {
-      margin-bottom: 4rem;
+      margin-bottom: 3rem;
     }
   }
 
   .content {
     h3 {
-      font-weight: 500;
+      font-weight: 600;
       text-transform: uppercase;
       color: $white;
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       white-space: nowrap;
     }
 
     h4 {
       color: $white;
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       font-weight: 300;
       white-space: nowrap;
     }
@@ -38,8 +38,7 @@
   .divisor {
     border-top: 1px dashed $white;
     width: 100%;
-    margin: 0 2rem;
-
+    margin: 0 1.5rem;
     @include devices(mobile) {
       display: none;
     }
@@ -47,8 +46,8 @@
 
   h5 {
     color: $gold;
-    font-size: 1.6rem;
-    font-weight: 400;
+    font-size: 1.5rem;
+    font-weight: 500;
     white-space: nowrap;
   }
 }

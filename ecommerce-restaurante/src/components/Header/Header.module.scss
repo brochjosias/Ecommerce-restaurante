@@ -2,7 +2,7 @@
 @import '../../styles/mixins.scss';
 
 .header {
-  min-height: 59rem;
+  min-height: 50rem;
   background: linear-gradient($gradient1, $gradient2);
   position: relative;
   margin-bottom: $marginBottom;
@@ -23,17 +23,25 @@
     color: $white;
 
     h1 {
+      font-size: 4rem; // Aumentei o tamanho do título
+      font-weight: 700;
       margin-bottom: 2rem;
+    }
+
+    p {
+      font-size: 1.5rem; // Aumentei o tamanho do parágrafo
+      font-weight: 300;
+      line-height: 4rem;
     }
   }
 
   .image {
     position: absolute;
-    bottom: -10rem;
-    left: 50%;
+    bottom: -13rem;
+    left: 56%;
     transform: translateX(-50%);
-    width: 80%;
+    width: 90%;
     max-width: 58rem;
-    height: 28rem;
+    height: 21rem;
   }
 }

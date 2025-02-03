@@ -6,6 +6,7 @@ import Menu from "@/components/Menu/Menu";
 import Reviews from "@/components/Reviews/Reviews";
 import Footer from "@/components/Footer/Footer";
 import client from "@/sanity";
+import Navbar from "@/components/Navbar/Navbar";
 
 export default async function Home() {
   // Buscando os dados diretamente dentro da função async
@@ -43,13 +44,16 @@ export default async function Home() {
 
   return (
     <>
+      <Navbar />
       <Header header={fetchedHeader} />
       <main>
         <Benefits benefits={fetchedBenefits} />
-        <ImageText data={fetchedAbout} />
+        <ImageText data={fetchedAbout} id="about" />
         <Cardapio cardapio={fetchedCardapio} />
-        <Reviews reviews={fetchedReviews} />
-        <ImageText data={fetchLocation} />
+        <div id="reviews">
+          <Reviews reviews={fetchedReviews} />
+        </div>
+        <ImageText data={fetchLocation} id="location" />
         <Menu menu={fetchMenu} />
         <Footer footer={fetchFooter} />
       </main>

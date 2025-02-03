@@ -1,0 +1,16 @@
+@import '../../styles/variables.scss';
+
+.list {
+  list-style: none;
+
+  a {
+    text-decoration: none;
+    color: $white;
+    padding: 1.5rem;
+    font-size: 2rem; // Aumenta o tamanho da fonte
+
+    &:hover {
+      font-weight: 600;
+    }
+  }
+}

@@ -3,17 +3,17 @@ import Image from "next/image";
 import { useNextSanityImage } from "next-sanity-image";
 import client from "@/sanity";
 
-const ImageText = ({ data }) => {
+const ImageText = ({ data, id }) => {
   const imageProps = useNextSanityImage(client, data.image);
 
   return (
-    <section className={styles.section}>
+    <section id={id} className={styles.section}>
       <div className={styles.image}>
         <Image
           src={imageProps.src}
-          width={imageProps.width} // Adicionando largura
-          height={imageProps.height} // Adicionando altura
-          alt={data.title || "Imagem"} // Garantindo um alt válido
+          width={imageProps.width}
+          height={imageProps.height}
+          alt={data.title || "Imagem"}
         />
       </div>
       <div className={styles.content}>

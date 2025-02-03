@@ -8,7 +8,7 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 100%;
   scroll-behavior: smooth;
 
   @include devices(notebook) {
@@ -22,7 +22,7 @@ html {
 
 body {
   font-size: 1.6rem;
-  font-family: $fontFamily;
+  font-family: var(--font-inter), sans-serif;
 }
 
 h1,
@@ -42,19 +42,21 @@ h1,
 
 h2,
 .h2 {
-  font-size: 3.6rem;
+  font-size: 2.1rem;
   font-weight: 600;
+  margin-bottom: 4rem;
 
   &.gold {
     text-align: center;
     text-transform: uppercase;
     color: $gold;
-    margin-bottom: 6rem;
-    font-size: 3.2rem;
+    margin-bottom: 4rem;
+    font-size: 2rem;
   }
 
   @include devices(mobile) {
     font-size: 3.2rem;
+    margin-bottom: 3rem;
   }
 }
 
@@ -63,15 +65,18 @@ p,
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 3rem;
+  margin-bottom: 4rem;
 }
 
 .btn {
   border: none;
   outline: none;
-  padding: 1rem 2rem;
+  padding: 1rem 1.3rem;
   border-radius: 0.5rem;
   text-decoration: none;
   display: inline-block;
+  font-size: 1.3rem;
+  margin-bottom: 4rem;
 
   &.btn-primary {
     background-color: $button;
@@ -86,8 +91,17 @@ p,
 .icon {
   width: 2.6rem;
   height: 2.6rem;
+  margin-bottom: 4rem;
 
   &:hover {
     color: $gradient2;
+  }
+}
+
+.section-spacing {
+  padding: 4rem 0;
+
+  @include devices(mobile) {
+    padding: 2rem 0;
   }
 }

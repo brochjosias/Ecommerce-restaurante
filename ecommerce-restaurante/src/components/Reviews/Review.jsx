@@ -7,7 +7,7 @@ const Review = ({ name, review, image }) => {
   const imageProps = useNextSanityImage(client, image);
 
   return (
-    <div className={styles.review}>
+    <div id="reviews" className={styles.review}>
       <div className={styles.avatar}>
         <Image
           src={imageProps.src}

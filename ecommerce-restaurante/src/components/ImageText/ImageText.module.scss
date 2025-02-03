@@ -4,51 +4,83 @@
 .section {
   @include max-width;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 4rem;
-  margin-bottom: $marginBottom;
-  scroll-margin-top: 15rem;
+  justify-content: space-between; // Alinha os itens nas extremidades
+  align-items: center; // Centraliza verticalmente
+  gap: 2rem; // Reduz o espaçamento entre a imagem e o texto
+  margin-bottom: 5rem; // Ajuste da margem inferior
 
   @include devices(tablet) {
     flex-direction: column;
+    align-items: center;
+    gap: 1.5rem; // Espaçamento menor no tablet
   }
 
   @include devices(mobile) {
-    margin-bottom: $marginBottomMobile;
+    margin-bottom: 3rem; // Margem menor no mobile
+    gap: 1rem; // Espaçamento menor no mobile
   }
 
   .image,
   .content {
     width: 100%;
-    max-width: 58rem;
+    max-width: 48%; // Define que cada elemento ocupa quase metade do espaço
+
+    @include devices(tablet) {
+      max-width: 100%; // Ocupa 100% da largura no tablet
+    }
   }
 
   .image {
     position: relative;
-    height: 44rem;
+    height: 40rem; // Altura fixa para a imagem
+    display: flex;
+    justify-content: center; // Centraliza a imagem horizontalmente
+    align-items: center; // Centraliza a imagem verticalmente
 
     @include devices(tablet) {
-      margin-bottom: 4rem;
+      height: 30rem; // Altura menor no tablet
+      order: 2; // Coloca a imagem abaixo do conteúdo no tablet
     }
 
     @include devices(mobile) {
-      height: 30rem;
+      height: 20rem; // Altura menor no mobile
+    }
+
+    img {
+      max-width: 100%; // Garante que a imagem não ultrapasse o contêiner
+      max-height: 100%; // Garante que a imagem não ultrapasse o contêiner
+      object-fit: cover; // Mantém a proporção da imagem
+      border-radius: 1rem; // Adiciona bordas arredondadas
     }
   }
 
   .content {
+    order: 1; // Garante que o conteúdo fique à esquerda no desktop
+    text-align: left; // Alinha o texto à esquerda
+
     span {
       text-transform: uppercase;
-      font-size: 2rem;
+      font-size: 1.5rem;
       letter-spacing: 10%;
-      margin-bottom: 1rem;
+      margin-bottom: 1rem; // Espaçamento abaixo do span
       color: $gradient2;
     }
 
-    h2,
+    h2 {
+      font-size: 2.1rem; // Tamanho maior para o título
+      font-weight: 600;
+      margin-bottom: 1.5rem; // Espaçamento abaixo do título
+    }
+
     p {
-      margin-bottom: 2rem;
+      font-size: 1.4rem;
+      line-height: 2.5rem;
+      font-weight: 400;
+      margin-bottom: 2rem; // Espaçamento abaixo do parágrafo
+    }
+
+    .btn {
+      margin-top: 1.5rem; // Espaçamento acima do botão
     }
   }
 }
