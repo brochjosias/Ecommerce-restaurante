@@ -23,6 +23,15 @@
     justify-content: space-between;
     align-items: center;
 
+      @include devices(mobile) {
+        a {
+          img {
+            width: 150px !important; // Tamanho reduzido
+            height: auto !important;
+          }
+        }
+      }
+
     .links {
       @include devices(tablet) {
         display: none;

@@ -3,10 +3,14 @@
 
 .benefits {
   @include max-width;
-  margin-bottom: 5rem; // Reduzido de $marginBottom para valor fixo
+  margin-bottom: 5rem;
+  margin-top: 10rem;
+
 
   @include devices(mobile) {
-    margin-bottom: 1rem; // Reduzido de $marginBottomMobile
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+    padding: 0 2rem;
   }
 
   .top {
@@ -24,6 +28,16 @@
     @include devices(tablet) {
       flex-direction: column;
       align-items: center;
+    }
+  }
+
+  .benefit {
+    margin: 2rem 0;
+
+    @include devices(mobile) {
+      margin: 3rem 0;
+      flex-direction: column;
+      text-align: center;
     }
   }
 }

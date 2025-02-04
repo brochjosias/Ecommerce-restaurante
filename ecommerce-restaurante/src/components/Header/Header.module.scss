@@ -7,8 +7,10 @@
   position: relative;
   margin-bottom: $marginBottom;
 
+
   @include devices(mobile) {
     margin-bottom: $marginBottomMobile;
+    min-height: 40rem;
   }
 
   .content {
@@ -18,30 +20,61 @@
     transform: translate(-50%, -50%);
     width: 100%;
     max-width: 70rem;
-    padding: 0 1rem;
+    padding: 0 2rem;
     text-align: center;
     color: $white;
 
+    @include devices(mobile) {
+      width: 100vw;
+      top: 40%;
+    }
+
     h1 {
-      font-size: 4rem; // Aumentei o tamanho do título
+      font-size: 4rem;
       font-weight: 700;
-      margin-bottom: 2rem;
+
+
+      @include devices(mobile) {
+        font-size: 3rem;
+        line-height: 1.2;
+      }
     }
 
     p {
-      font-size: 1.5rem; // Aumentei o tamanho do parágrafo
+      font-size: 1.5rem;
       font-weight: 300;
       line-height: 4rem;
+
+      @include devices(mobile) {
+        font-size: 1.3rem;
+        line-height: 2rem;
+        padding: 0 1rem;
+        margin-bottom: -2rem;
+        margin-top: 1rem;
+      }
     }
   }
 
   .image {
     position: absolute;
     bottom: -13rem;
-    left: 56%;
+    left: 50%;
     transform: translateX(-50%);
     width: 90%;
     max-width: 58rem;
-    height: 21rem;
+    height: 30rem;
+
+    @include devices(mobile) {
+      bottom: -8rem;
+      height: 20rem;
+      max-width: 90%;
+      left: 50%;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
   }
 }

@@ -34,7 +34,7 @@ const Navbar = () => {
           <Image src={"/logo.png"} width={220} height={50} alt="Logo" />
         </a>
         <nav className={styles.links}>
-          <Navlinks toggleMenu={null} />
+          <Navlinks toggleMenu={toggleMenuHandler} />
         </nav>
 
         <GiHamburgerMenu className={styles.icon} onClick={toggleMenuHandler} />

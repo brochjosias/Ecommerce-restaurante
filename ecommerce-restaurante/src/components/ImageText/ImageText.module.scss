@@ -4,83 +4,89 @@
 .section {
   @include max-width;
   display: flex;
-  justify-content: space-between; // Alinha os itens nas extremidades
-  align-items: center; // Centraliza verticalmente
-  gap: 2rem; // Reduz o espaçamento entre a imagem e o texto
-  margin-bottom: 5rem; // Ajuste da margem inferior
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
 
   @include devices(tablet) {
     flex-direction: column;
-    align-items: center;
-    gap: 1.5rem; // Espaçamento menor no tablet
+    gap: 1.5rem;
   }
 
   @include devices(mobile) {
-    margin-bottom: 3rem; // Margem menor no mobile
-    gap: 1rem; // Espaçamento menor no mobile
+    margin-bottom: 1rem;
+    gap: 3rem;
+    padding: 0 2rem;
   }
 
   .image,
   .content {
     width: 100%;
-    max-width: 48%; // Define que cada elemento ocupa quase metade do espaço
+    max-width: 48%;
 
     @include devices(tablet) {
-      max-width: 100%; // Ocupa 100% da largura no tablet
+      max-width: 100%;
     }
   }
 
   .image {
     position: relative;
-    height: 40rem; // Altura fixa para a imagem
+    height: 37rem;
     display: flex;
-    justify-content: center; // Centraliza a imagem horizontalmente
-    align-items: center; // Centraliza a imagem verticalmente
+    justify-content: center;
+    align-items: center;
 
     @include devices(tablet) {
-      height: 30rem; // Altura menor no tablet
-      order: 2; // Coloca a imagem abaixo do conteúdo no tablet
+      height: 30rem;
+      order: 2;
     }
 
     @include devices(mobile) {
-      height: 20rem; // Altura menor no mobile
+      height: 25rem;
     }
 
     img {
-      max-width: 100%; // Garante que a imagem não ultrapasse o contêiner
-      max-height: 100%; // Garante que a imagem não ultrapasse o contêiner
-      object-fit: cover; // Mantém a proporção da imagem
-      border-radius: 1rem; // Adiciona bordas arredondadas
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      border-radius: 1rem;
     }
   }
 
   .content {
-    order: 1; // Garante que o conteúdo fique à esquerda no desktop
-    text-align: left; // Alinha o texto à esquerda
+    order: 1;
+    text-align: left;
+    font-size: 2rem;
+    font-weight: 700;
 
-    span {
-      text-transform: uppercase;
-      font-size: 1.5rem;
-      letter-spacing: 10%;
-      margin-bottom: 1rem; // Espaçamento abaixo do span
-      color: $gradient2;
+
+    @include devices(mobile) {
+      order: 2;
+      text-align: center;
+
     }
 
     h2 {
-      font-size: 2.1rem; // Tamanho maior para o título
-      font-weight: 600;
-      margin-bottom: 1.5rem; // Espaçamento abaixo do título
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      font-weight: 400;
+
+      @include devices(mobile) {
+        font-size: 2rem;
+      }
     }
 
     p {
       font-size: 1.4rem;
-      line-height: 2.5rem;
-      font-weight: 400;
-      margin-bottom: 2rem; // Espaçamento abaixo do parágrafo
-    }
+      line-height: 2.2rem;
+      margin-bottom: 1rem;
+      font-weight: 350;
 
-    .btn {
-      margin-top: 1.5rem; // Espaçamento acima do botão
+      @include devices(mobile) {
+        font-size: 1.6rem;
+        margin-bottom: 3rem;
+      }
     }
   }
 }
