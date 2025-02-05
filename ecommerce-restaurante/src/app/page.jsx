@@ -9,21 +9,39 @@ import client from "@/sanity";
 import Navbar from "@/components/Navbar/Navbar";
 
 export default async function Home() {
-  const fetchedHeader = await client.fetch(`*[_type == "header"][0]`);
-  const fetchedBenefits = await client.fetch(`*[_type == "benefits"][0..2]`);
-  const fetchedAbout = await client.fetch(`*[_type == "about"][0]`);
-  const fetchedCardapio = await client.fetch(`
+  const fetchedHeader = await client.fetch(`*[_type == "header"][0]`, {
+    cache: "no-store",
+  });
+  const fetchedBenefits = await client.fetch(`*[_type == "benefits"][0..2]`, {
+    cache: "no-store",
+  });
+  const fetchedAbout = await client.fetch(`*[_type == "about"][0]`, {
+    cache: "no-store",
+  });
+  const fetchedCardapio = await client.fetch(
+    `
     *[_type == "cardapio"][0..3]{
       _id,
       title,
       category,
       "image": image.asset->url
     }
-  `);
-  const fetchedReviews = await client.fetch(`*[_type == "reviews"][0..2]`);
-  const fetchLocation = await client.fetch(`*[_type == "location"][0]`);
-  const fetchMenu = await client.fetch(`*[_type == "menu"][0..19]`);
-  const fetchFooter = await client.fetch(`
+  `,
+    {
+      cache: "no-store",
+    }
+  );
+  const fetchedReviews = await client.fetch(`*[_type == "reviews"][0..2]`, {
+    cache: "no-store",
+  });
+  const fetchLocation = await client.fetch(`*[_type == "location"][0]`, {
+    cache: "no-store",
+  });
+  const fetchMenu = await client.fetch(`*[_type == "menu"][0..19]`, {
+    cache: "no-store",
+  });
+  const fetchFooter = await client.fetch(
+    `
     *[_type == "footer"][0] {
       text,
       instagram,
@@ -39,7 +57,11 @@ export default async function Home() {
         text
       }
     }
-  `);
+  `,
+    {
+      cache: "no-store",
+    }
+  );
 
   return (
     <>
