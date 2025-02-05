@@ -1,5 +1,5 @@
-import { useNextSanityImage } from "next-sanity-image"; // Importe o hook
-import client from "../../sanity"; // Importe o cliente do Sanity
+import { useNextSanityImage } from "next-sanity-image";
+import client from "../../sanity";
 import Image from "next/image";
 import styles from "./Benefit.module.scss";
 

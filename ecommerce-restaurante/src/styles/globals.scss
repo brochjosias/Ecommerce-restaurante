@@ -44,7 +44,7 @@ h1,
   }
 
   @include devices(mobile) {
-    font-size: 3rem; // Reduzido para mobile
+    font-size: 3rem;
     line-height: 1.2;
   }
 }

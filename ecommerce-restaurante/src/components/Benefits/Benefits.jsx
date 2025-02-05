@@ -2,12 +2,11 @@ import Benefit from "./Benefit";
 import styles from "./Benefits.module.scss";
 
 const Benefits = ({ benefits }) => {
-  // Verificando se 'benefits' tem pelo menos 3 itens
   if (!benefits || benefits.length < 3) {
     return <p>No benefits found.</p>;
   }
 
-  // Acessando os dados corretamente
+  // Acessando os dados
   const { title: title1, subtitle: subtitle1, icon: icon1 } = benefits[0];
   const { title: title2, subtitle: subtitle2, icon: icon2 } = benefits[1];
   const { title: title3, subtitle: subtitle3, icon: icon3 } = benefits[2];

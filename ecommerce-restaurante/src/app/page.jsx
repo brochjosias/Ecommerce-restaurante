@@ -9,7 +9,6 @@ import client from "@/sanity";
 import Navbar from "@/components/Navbar/Navbar";
 
 export default async function Home() {
-  // Buscando os dados diretamente dentro da função async
   const fetchedHeader = await client.fetch(`*[_type == "header"][0]`);
   const fetchedBenefits = await client.fetch(`*[_type == "benefits"][0..2]`);
   const fetchedAbout = await client.fetch(`*[_type == "about"][0]`);

@@ -25,9 +25,9 @@ const Header = ({ header }) => {
         <Image
           src={imageProps.src}
           loader={imageProps.loader}
-          alt={header.title} // Adiciona o alt para acessibilidade
-          width={width} // Define a largura
-          height={height} // Define a altura
+          alt={header.title}
+          width={width}
+          height={height}
           style={{ objectFit: "contain" }} // Substitui a propriedade "objectFit"
         />
       </div>

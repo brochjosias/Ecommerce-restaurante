@@ -4,7 +4,7 @@
 .item {
   display: flex;
   align-items: center;
-  margin-bottom: 5rem; // Adicionado margin-bottom principal
+  margin-bottom: 5rem;
 
   @include devices(mobile) {
     flex-direction: column;
