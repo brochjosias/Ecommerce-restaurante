@@ -6,6 +6,7 @@
   align-items: center;
   margin-bottom: 5rem;
 
+
   @include devices(mobile) {
     flex-direction: column;
     text-align: center;

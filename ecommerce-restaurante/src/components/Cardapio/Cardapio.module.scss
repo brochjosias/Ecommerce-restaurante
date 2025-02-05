@@ -3,11 +3,13 @@
 
 .cardapio-wrapper {
   background-color: $background;
-  margin-bottom: 4rem;
+  margin-bottom: 6rem;
   padding: 5rem 0;
+  margin-top: -6rem;
 
   @include devices(mobile) {
     margin-bottom: 3rem;
+    margin-top: 10rem;
   }
 
   .cardapio {

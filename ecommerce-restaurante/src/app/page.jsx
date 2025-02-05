@@ -11,12 +11,15 @@ import Navbar from "@/components/Navbar/Navbar";
 export default async function Home() {
   const fetchedHeader = await client.fetch(`*[_type == "header"][0]`, {
     cache: "no-store",
+    next: { revalidate: 3 },
   });
   const fetchedBenefits = await client.fetch(`*[_type == "benefits"][0..2]`, {
     cache: "no-store",
+    next: { revalidate: 3 },
   });
   const fetchedAbout = await client.fetch(`*[_type == "about"][0]`, {
     cache: "no-store",
+    next: { revalidate: 3 },
   });
   const fetchedCardapio = await client.fetch(
     `
@@ -29,16 +32,20 @@ export default async function Home() {
   `,
     {
       cache: "no-store",
+      next: { revalidate: 3 },
     }
   );
-  const fetchedReviews = await client.fetch(`*[_type == "reviews"][0..2]`, {
+  const fetchedReviews = await client.fetch(`*[_type == "reviews"][0..9]`, {
     cache: "no-store",
+    next: { revalidate: 4 },
   });
   const fetchLocation = await client.fetch(`*[_type == "location"][0]`, {
     cache: "no-store",
+    next: { revalidate: 3 },
   });
   const fetchMenu = await client.fetch(`*[_type == "menu"][0..19]`, {
     cache: "no-store",
+    next: { revalidate: 3 },
   });
   const fetchFooter = await client.fetch(
     `
@@ -60,6 +67,7 @@ export default async function Home() {
   `,
     {
       cache: "no-store",
+      next: { revalidate: 3 },
     }
   );
 

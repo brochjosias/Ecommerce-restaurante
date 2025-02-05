@@ -14,7 +14,7 @@ const Reviews = ({ reviews }) => {
   return (
     <section className={styles.reviews}>
       <div className={styles.heading}>
-        <span>Depoimentos dos Clientes</span>
+        <span>ALGUNS DEPOIMENTOS DOS NOSSOS CLIENTES</span>
       </div>
       <div className={styles.content}>{renderReviews}</div>
     </section>

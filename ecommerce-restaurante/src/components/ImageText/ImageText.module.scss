@@ -7,7 +7,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 13rem;
 
   @include devices(tablet) {
     flex-direction: column;
@@ -15,7 +15,7 @@
   }
 
   @include devices(mobile) {
-    margin-bottom: 1rem;
+    margin-bottom: 10rem;
     gap: 3rem;
     padding: 0 2rem;
   }
@@ -59,6 +59,7 @@
     text-align: left;
     font-size: 2rem;
     font-weight: 700;
+    margin-bottom: -10rem;
 
 
     @include devices(mobile) {
@@ -79,8 +80,8 @@
 
     p {
       font-size: 1.4rem;
-      line-height: 2.2rem;
-      margin-bottom: 1rem;
+      line-height: 2rem;
+      margin-bottom: 3rem;
       font-weight: 350;
 
       @include devices(mobile) {

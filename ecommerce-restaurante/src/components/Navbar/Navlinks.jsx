@@ -4,7 +4,7 @@ const scrollToSection = (event, id, toggleMenu) => {
   event.preventDefault();
   const target = document.getElementById(id);
   if (target) {
-    const offset = 150;
+    const offset = 130;
     const elementPosition = target.getBoundingClientRect().top + window.scrollY;
     window.scrollTo({
       top: elementPosition - offset,
