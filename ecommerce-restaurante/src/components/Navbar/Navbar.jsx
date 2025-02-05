@@ -1,4 +1,4 @@
-"use client"; // Adicione esta linha no topo do arquivo
+"use client";
 
 import styles from "./Navbar.module.scss";
 import Image from "next/image";
@@ -12,15 +12,11 @@ const Navbar = () => {
 
   useEffect(() => {
     const setNavbarHandler = () => {
-      if (window.scrollY >= 600) return setIsNavbarShow(true);
-      return setIsNavbarShow(false);
+      setIsNavbarShow(window.scrollY >= 600);
     };
 
     document.addEventListener("scroll", setNavbarHandler);
-
-    return () => {
-      document.removeEventListener("scroll", setNavbarHandler);
-    };
+    return () => document.removeEventListener("scroll", setNavbarHandler);
   }, []);
 
   const toggleMenuHandler = () => setIsMenu(!isMenu);
@@ -31,16 +27,23 @@ const Navbar = () => {
     >
       <div className={styles.navbar}>
         <a href="#">
-          <Image src={"/logo.png"} width={220} height={50} alt="Logo" />
+          <Image src="/logo.png" width={220} height={50} alt="Logo" />
         </a>
+
+        {/* Desktop Links (without toggleMenu) */}
         <nav className={styles.links}>
-          <Navlinks toggleMenu={toggleMenuHandler} />
+          <Navlinks />
         </nav>
 
+        {/* Mobile Burger Icon */}
         <GiHamburgerMenu className={styles.icon} onClick={toggleMenuHandler} />
+
+        {/* Mobile Burger Menu (with toggleMenu) */}
         <nav className={`${styles.burger} ${isMenu && styles.active}`}>
           <Navlinks toggleMenu={toggleMenuHandler} />
         </nav>
+
+        {/* Background Overlay */}
         <div className={`${styles.background} ${isMenu && styles.active}`} />
       </div>
     </section>
