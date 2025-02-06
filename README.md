@@ -19,16 +19,16 @@ Perfeito para você que precisa de um sistema para o seu restaurante, o Ecommerc
 • Separação de responsabilidades usando hooks e funções auxiliares.
 • Configuração otimizada do Next.js para melhorar SEO e performance.
 
-🌐 Integração com Sanity CMS
+🌐 Integração com Sanity CMS:
 • Configuração do Sanity Studio para gerenciar conteúdo dinâmico.
 • Criação de schemas personalizados para gerenciar receitas, produtos e conteúdo do site.
 • Integração fluida com Next.js para consumir dados do Sanity via @sanity/client.
 
-🎨 Estilização com SCSS
+🎨 Estilização com SCSS:
 • Uso de módulos SCSS para estilização encapsulada por componente.
 • Variáveis para cores, tipografia e espaçamentos, garantindo consistência visual.
 
-⚙️ Como Executar o Projeto
+⚙️ Como Executar o Projeto:
 
 • Clone o repositório:
 git clone https://github.com/brochjosias/Ecommerce-restaurante.git
