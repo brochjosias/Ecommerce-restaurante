@@ -1,6 +1,6 @@
 # Ecommerce-restaurante
 
-🍝 Ecommerce-restaurante - Projeto Responsivo com Next.js, Sanity e SCSS
+🍝 Ecommerce-restaurante - Projeto Responsivo com Next.js, SCSS e Sanity
 
 Perfeito para você que precisa de um sistema para o seu restaurante, o Ecommerce-restaurante foi desenvolvido para unir tecnologia e praticidade na gestão do seu negócio. Desde a organização de conteúdo até a apresentação de um site moderno e responsivo, este projeto foi pensado para oferecer uma experiência digital eficiente e escalável.
 
@@ -26,7 +26,6 @@ Perfeito para você que precisa de um sistema para o seu restaurante, o Ecommerc
 
 🎨 Estilização com SCSS
 • Uso de módulos SCSS para estilização encapsulada por componente.
-• Arquivos organizados seguindo o padrão 7-1 (base, layout, components, pages, themes, utils, vendors).
 • Variáveis para cores, tipografia e espaçamentos, garantindo consistência visual.
 
 ⚙️ Como Executar o Projeto
